@@ -13,31 +13,35 @@
 
   <div class="container">
     <div style="margin-top: 5%">
-      <h3 style="text-align: center;">Final Result</h3>
-        <p style="text-align: center;" href="{{url_for('upload_image')}}">Reset</p>
+      <h1 style="text-align: center;">Here is your image with its palette</h1>
+        <center>
+          <a href={{back}}
+            <p1> Go back to homepage </p1>
+          </a>
+        </center>
     </div>
       <div>
         <img src="{{src}}" height="{{height}}" width="{{width}}" style="margin-left: auto; margin-right: auto; display: block">
     </div>
-      <h3 style="text-align: center; padding-top: 40px"> Palette with hex codes</h3>
+      <h2 style="text-align: center; padding-top: 40px"> Here are the hex values for the colors in your palette:</h2>
+        <center>
+            <div style="padding-top: 70px">
+                <table>
 
-        <div style="padding-top: 70px">
-            <table>
+                  <tr>
+                    {% for hex in hex_values %}
+                    <th style=" padding: 5px 20px 20px 20px; border: none;">
+                      {{ hex }}
+                    </th>
+                    {% endfor %}
+                  </tr>
+                <tr>
+                    <img src="{{src2}}" style="margin-left: auto; margin-right: auto; display: block">
+                </tr>
+            </table>
 
-              <tr>
-                {% for hex in hex_codes %}
-                <th style=" padding: 5px 20px 20px 20px; border: none;">
-                  {{ hex }}
-                </th>
-                {% endfor %}
-              </tr>
-            <tr>
-                <img src="{{src2}}" style="margin-left: auto; margin-right: auto; display: block">
-            </tr>
-        </table>
-
-        </div>
-
+            </div>
+        </center>
   </div>
 </body>
 </html>

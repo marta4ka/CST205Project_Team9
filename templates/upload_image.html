@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>Color-Palette</title>
+  <title>Image-Palette-Generator</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -16,17 +16,20 @@
 
   <div class="container">
     <div style="margin-top: 5%">
-      <h2 style="text-align: center;">Color Palette</h2>
+      <h1 style="text-align: center;">Color Palette Generator</h1>
     </div>
     <div class="row">
 
          <div class="six columns" style="padding-left: 10px">
-        <img src="{{url_for('static', filename='images/home.jpg')}}" width="650"
-height="410">
+           <body bgcolor="#E0EEEE">
+             <img src={{homepage}} class="img-responsive img-rounded" alt="not found0" style = "display: block; margin-left: auto; margin-right: auto">
+          </body>
       </div>
     </div>
+    <body>
+      <center>
       <div style="padding-top: 40px">
-	  <p> Image must be less than 4Mb </p>
+	  <h2> Upload your image or logo to see its color palette </h2>
           <form method="POST" enctype="multipart/form-data">
             <div>
               {{form.hidden_tag()}}
@@ -37,27 +40,24 @@ height="410">
             </div>
             <div class="row">
               <div class="six columns">
-                <label>Palette Height : Integer(1-10) {10 being the smallest}</label>
-                {{form.height_of_palette(class="u-full-width", value=4)}}
-                 {% for error in form.height_of_palette.errors %}
-                   <span style="color:red;">{{ error}}</span>
-                {% endfor %}
+                    <label>From 1 to 10 {10 being the smallest} how large would like your palette?</label>
+                  {{form.palette_height(class="u-full-width", value=4)}}
+                   {% for error in form.palette_height.errors %}
+                     <span style="color:red;">{{ error}}</span>
+                  {% endfor %}
               </div>
               <div class="six columns">
-                <label>Palette Outline Width in Pixels (1-40)</label>
-                {{form.width_of_palette(class="u-full-width", value=10)}}
-                 {% for error in form.width_of_palette.errors %}
-                   <span style="color:red;">{{ error}}</span>
-                {% endfor %}
+                  <label>From 1 to 40 (40 being the thinest) what border-width would you prefer?  </label>
+                  {{form.palette_outline_width(class="u-full-width", value=10)}}
+                   {% for error in form.palette_outline_width.errors %}
+                     <span style="color:red;">{{ error}}</span>
+                  {% endfor %}
               </div>
-              <label>Palette Outline color</label>
+              <label>Please select the color you would like your palette border to have (click on the box for options): </label>
               <input type="color" name="palette_outline_color" value="white">
             </div>
             <input class="button-primary" type="submit" value="submit" >
             </form>
       </div>
-
-  </div>
-
-</body>
+    </center>
 </html>
