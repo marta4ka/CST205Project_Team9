@@ -1,0 +1,6 @@
+Python 3
+
+The following modules are required to run this program:
+flask
+colorthief
+...
