@@ -8,7 +8,7 @@ Install:
 pip install -r requirements.txt
 
 Run:
-python run.py
+python flask_webpage.py
 
 View: http://127.0.0.1:5000/
 
