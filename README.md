@@ -3,6 +3,17 @@ PaletteFinder
 
 Website with a program that extracts dominant colors from an uploaded image to create two palettes: original colors and complementary colors, displying an image of them at the bottom of the page. 
 
+# install & run
+Install:
+pip install -r requirements.txt
+
+Run:
+python run.py
+
+View on http://127.0.0.1:5000/
+
+# Files Summary
+
 extract_palette.py:
 This file takes an image and analyzes the image to extract its color values. 
 It will then put the colors from the image into separate boxes and then will place them sequentially and
@@ -26,3 +37,5 @@ web application. This is where we will be asking the user to upload an image and
 The first route will accept the upload, send the upload to our extract_palette file to get the color values, and obtain the
 hex values. The second route function will be used to display the results.
 
+
+Video: https://www.youtube.com/watch?v=hxukaaXDdEM
