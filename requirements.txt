@@ -1,6 +1,19 @@
 Python 3
 
 The following modules are required to run this program:
-flask
+Flask
+Flask
+Flask-Bootstrap
+Flask-Uploads
+Flask-WTF
+itsdangerou
+Jinja2
+Pillow
 colorthief
-...
+dominate
+requests
+webcolors
+WTForms
+uuid
+os
+cv2
