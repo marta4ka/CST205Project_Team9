@@ -10,7 +10,7 @@ horizontally on a blank canvas. When the canvas is created we will have two exam
 a palette with 10 dominant colors from the image,
 and the original image with the palette beneath it.
 
-api_colormind.py
+api_colormind.py:
 This file contains functions taking two dominant colors from an image and using API to generate a list of 5 colors matching these dominant colors. Returns a list of five tuples.
 
 extract_palette_mess.py:
