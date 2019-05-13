@@ -7,7 +7,17 @@ extract_palette.py:
 This file takes an image and analyzes the image to extract its color values. 
 It will then put the colors from the image into separate boxes and then will place them sequentially and
 horizontally on a blank canvas. When the canvas is created we will have two examples: 
-a palette with the dominant colors from the image,
+a palette with 10 dominant colors from the image,
+and the original image with the palette beneath it.
+
+api_colormind.py
+This file contains functions taking two dominant colors from an image and using API to generate a list of 5 colors matching these dominant colors. Returns a list of five tuples.
+
+extract_palette_mess.py:
+This file takes an image and creates a palette of complementary colors. 
+It will then put the colors from the image into separate boxes and then will place them sequentially and
+horizontally on a blank canvas. When the canvas is created we will have two examples: 
+a palette with 5 complementary colors from the image,
 and the original image with the palette beneath it.
 
 flask_webpage.py:
