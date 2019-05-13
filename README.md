@@ -3,7 +3,7 @@ PaletteFinder
 
 Website with a program that extracts dominant colors from an uploaded image to create two palettes: original colors and complementary colors, displying an image of them at the bottom of the page. 
 
-# install & run
+# Install & Run
 Install:
 pip install -r requirements.txt
 
