@@ -38,4 +38,5 @@ The first route will accept the upload, send the upload to our extract_palette f
 hex values. The second route function will be used to display the results.
 
 
-Video: https://www.youtube.com/watch?v=hxukaaXDdEM
+# Video
+https://www.youtube.com/watch?v=hxukaaXDdEM
