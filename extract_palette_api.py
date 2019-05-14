@@ -1,13 +1,15 @@
 """
-File Name: extract_palette.py
+File Name: extract_palette_api.py
 Team N9ne: Herendira Camarillo, Marta Gubanova, Jose Morado, Marco Rosales
 Date: 5/10/2019
 Description:  This file takes an image and analyzes the image to extract its
-              color values. It will then put the colors from the image into
-              seperate boxes and then will place them sequentially and
-              horizontally on a blank canvas. When the canvas is created we
+              color values using an api. It will then put the colors from the
+              image into a seperate boxes and then will place them sequentially
+              and horizontally on a blank canvas. When the canvas is created we
               will have two examples: a palette with the colors in the image,
-              and the original image with the palette beneath it.
+              and the original image with the palette beneath it. The program
+              will display 5 colors in the platte. This is becaus the api
+              takes a bit longer to get the color values from the image.
 """
 #we first import pillow module so that we can be able to manipulate image
 from PIL import Image, ImageDraw
@@ -18,7 +20,8 @@ from webcolors import rgb_to_hex
 import api_colormind
 #this file is used to access a function taking main colors from the image and generating a complementary palette using API.
 
-def extract_colors(image, outline_width, outline_color, color_count=5):
+def extract_colors(image, outline_width, palette_length_div, outline_color, color_count=5):
+    #palette_length_div = 5
     #we grab the original image that the user uploaded and open it
     initial_image = Image.open(image)
     #then we figure out the dimensions of the uploaded image

@@ -11,6 +11,8 @@ Description: This file is our main file for our palette converter program. It
              hex values. The second route function will be used to display
              the results.
 """
+#from extract_palette_api import extract_colors
+from extract_palette import extract_colors
 from flask import Flask, render_template, flash, redirect, url_for, request, session
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 from wtforms import StringField, SubmitField
@@ -20,7 +22,6 @@ from werkzeug.utils import secure_filename
 from wtforms import IntegerField
 from webcolors import hex_to_rgb
 from flask_wtf import FlaskForm
-from extract_palette import extract_colors
 import uuid
 import os
 #this is our form for flask. We use it to accept the users uploaded image.
